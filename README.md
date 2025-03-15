@@ -59,7 +59,7 @@ This project is licensed under the MIT License.
 
 ## Contact
 For any inquiries or support, feel free to reach out:
-- Email: support@healthmate.com
+- Email: sagardipdebnath567@gmail.com 
 - GitHub: [HealthMate](https://github.com/yourusername/HealthMate)
 
 
