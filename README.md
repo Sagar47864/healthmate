@@ -2,7 +2,7 @@
 
 # HealthMate
 
-![HealthMate Logo](./WhatsApp%20Image%202025-03-15%20at%2019.49.36_8d7e5928.jpg)
+![HealthMate Logo](./lib/title-logo.jpg)
 
 ## Overview
 HealthMate is a healthcare platform designed to provide users with essential medical information, doctor consultations, and health tracking features. The platform aims to improve accessibility to healthcare services and promote wellness among users.
