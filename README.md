@@ -23,10 +23,16 @@ git clone https://github.com/yourusername/HealthMate.git
 cd HealthMate
 
 # Install dependencies
-npm install
+install Flutter sdk 
+
+#installation
+install android studio
+
+#Emulator
+select Emulator
 
 # Run the application
-npm start
+F5 to start
 ```
 
 ## Technologies Used
