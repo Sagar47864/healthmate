@@ -39,11 +39,19 @@ class HomeScreen extends StatelessWidget {
           elevation: 0,
           selectedItemColor: Colors.teal,
           unselectedItemColor: Colors.teal,
+          onTap: (index) {
+            if (index == 1) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProfileScreen()),
+              );
+            }
+          },
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home, size: 30), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.favorite, size: 30), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.local_hospital, size: 30), label: ''),
-            BottomNavigationBarItem(icon: Icon(Icons.settings, size: 30), label: ''),
+            BottomNavigationBarItem(icon: Icon(Icons.home, size: 30), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.person, size: 30), label: 'Profile'),
+            BottomNavigationBarItem(icon: Icon(Icons.local_hospital, size: 30), label: 'Health'),
+            BottomNavigationBarItem(icon: Icon(Icons.settings, size: 30), label: 'Settings'),
           ],
         ),
       ),
@@ -56,25 +64,30 @@ class HomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushReplacement(
+                  IconButton(
+                    icon: Icon(Icons.arrow_back, color: Colors.teal, size: 30),
+                    onPressed: () {},
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => HomeScreen()),
                       );
                     },
                     child: Text(
-                      'HealthMate',
-                      style: TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.teal,
-                      ),
+                      "HealthMate",
+                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.teal),
                     ),
                   ),
                   IconButton(
-                    icon: Icon(Icons.menu, color: Colors.teal, size: 30),
-                    onPressed: () {},
+                    icon: Icon(Icons.person, color: Colors.teal, size: 30),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ProfileScreen()),
+                      );
+                    },
                   ),
                 ],
               ),
@@ -179,6 +192,30 @@ class HomeScreen extends StatelessWidget {
       ),
       padding: EdgeInsets.all(15),
       child: Icon(icon, color: Colors.white, size: 40),
+    );
+  }
+}
+
+// Profile Page
+class ProfileScreen extends StatelessWidget {
+   @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Profile"),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context); // Goes back to Home Screen
+          },
+        ),
+      ),
+      body: Center(
+        child: Text(
+          "Welcome to your Profile!",
+          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+        ),
+      ),
     );
   }
 }

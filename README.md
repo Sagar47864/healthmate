@@ -36,11 +36,11 @@ F5 to start
 ```
 
 ## Technologies Used
-- **Frontend:** React.js, Tailwind CSS
-- **Backend:** Node.js, Express.js
+- **Frontend:** Flutter, Dart
+- **Backend:** Node.js, Express.js, python
 - **Database:** MongoDB
 - **Authentication:** Firebase/Auth0
-- **AI Chatbot:** OpenAI API
+
 
 ## Contribution
 Contributions are welcome! If you'd like to contribute, please follow these steps:
