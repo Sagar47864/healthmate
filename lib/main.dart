@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: Colors.blueAccent,
+          color: Colors.teal,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
@@ -37,8 +37,8 @@ class HomeScreen extends StatelessWidget {
         child: BottomNavigationBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          selectedItemColor: Colors.blue,
-          unselectedItemColor: Colors.blue,
+          selectedItemColor: Colors.teal,
+          unselectedItemColor: Colors.teal,
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home, size: 30), label: ''),
             BottomNavigationBarItem(icon: Icon(Icons.favorite, size: 30), label: ''),
@@ -56,12 +56,24 @@ class HomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  IconButton(
-                    icon: Icon(Icons.arrow_back, color: Colors.blue, size: 30),
-                    onPressed: () {},
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomeScreen()),
+                      );
+                    },
+                    child: Text(
+                      'HealthMate',
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.teal,
+                      ),
+                    ),
                   ),
                   IconButton(
-                    icon: Icon(Icons.menu, color: Colors.blue, size: 30),
+                    icon: Icon(Icons.menu, color: Colors.teal, size: 30),
                     onPressed: () {},
                   ),
                 ],
@@ -100,7 +112,7 @@ class HomeScreen extends StatelessWidget {
       padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [Colors.cyan, Colors.blue],
+          colors: [Colors.teal, Colors.blueAccent],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -154,7 +166,7 @@ class HomeScreen extends StatelessWidget {
   Widget _buildIcon(IconData icon) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.blueAccent,
+        color: Colors.teal,
         shape: BoxShape.circle,
         boxShadow: [
           BoxShadow(
